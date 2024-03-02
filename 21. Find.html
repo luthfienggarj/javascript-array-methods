@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Method</title>
+</head>
+<body style="background: lab(29.2345% 39.3825 20.0664);">
+    
+</body>
+</html>
+
+<!-- Metode find() mengembalikan nilai elemen array 
+    pertama yang memenuhi fungsi pengujian yang disediakan. -->
+<script>
+
+    // Normal Find
+    const students = ['Ichigo', 'Orihime', 'Chad', 'Uryu'];
+    const res = students.find(person => person === 'Uryu');
+    console.log(res);
+    // Output : Uryu
+
+    // Object Find
+    const FairyTail = [
+        {
+            wizardname: 'Natsu Dragneel',
+            power: 'Flames'
+        },
+        {
+            wizardname: 'Lucy Heartfillia',
+            power: 'Celestial Spirits'
+        },
+        {
+            wizardname: 'Erza Scarlet',
+            power: 'Equipment'
+        },
+        {
+            wizardname: 'Gray Fullbuster',
+            power: 'Ice'
+        },
+    ];
+    // Untuk Mengetahui Keseluruhan Object Gunakan Sintaks Ini
+    const findWizard = FairyTail.find(wizard => wizard.power === 'Equipment');
+    console.log(findWizard);
+    // Output : Object { wizardname: "Erza Scarlet", power: "Equipment" }
+
+    // Untuk Output Power Saja
+    const findWiza = FairyTail.find(wizard => wizard.power === 'Equipment').power;
+    console.log(findWiza);
+    // Output : Equipment
+
+    // Soal 1 (Angka Pertama > 35)
+    const numbers = [25, 30, 35, 40, 45];
+    const resNum = numbers.find(num => num > 35);
+    console.log(resNum);
+
+    // Soal 2 (Length > 6)
+    const words = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+    const resWords = words.find(word => word.length > 6);
+    console.log(resWords);
+
+    // Soal 3 (Suhu > 20)
+    const temperatures = [18, 22, 17, 25, 21];
+    const resTemp = temperatures.find(temp => temp > 20);
+    console.log(resTemp);
+
+</script>

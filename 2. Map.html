@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- Map Methods -->
+<!-- Metode map() membuat array baru dengan hasil 
+    pemanggilan fungsi untuk setiap elemen array. -->
+
+<script>
+    const Inventory = [
+        {
+            name: 'Laptop',
+            price: 5000,
+            count: 5,
+        }, {
+            name: 'Table',
+            price: 1200,
+            count: 12,
+        }, {
+            name: 'Mouse',
+            price: 700,
+            count: 8
+        }];
+
+    // Menjumlahkan Price * Count
+    Inventory.map((item) => {
+        console.log(item.price * item.count);
+    });
+
+    // Jika Ingin Menampilkan Nama + Total Harga 
+    const TotalValue = Inventory.map(item => ({
+        name: item.name,
+        total: item.price * item.count
+    }))
+    console.log(TotalValue);
+</script>
+
+<!-- Soal - Soal Map Methods -->
+
+<script>
+    // Soal 1 Angka Di Kali Dua
+    const arrNumber = [1, 2, 3, 4, 5];
+    const angkaDikaliDua = arrNumber.map((item) => {
+        return item * 2
+    });
+    console.log(angkaDikaliDua);
+
+    // Soal 2 Jumlah Karakter
+    const Words = ["Halo", "Selamat", "Pagi"];
+    const kataPanjang = Words.map((item) => {
+        return item.length
+    })
+    console.log(kataPanjang);
+
+    // Soal 3 Hanya Berisi Nama-Nama Mahasiswa
+    const Students = [
+        { name: "Alice", grade: 85 },
+        { name: "Bob", grade: 78 },
+        { name: "Charlie", grade: 92 }
+    ];
+    const allStudents = Students.map((studentName) => {
+        return studentName.name
+    })
+    console.log(allStudents);
+
+    // Soal 4 Potongan Diskon 10%
+    const Products = [
+        { name: "Baju", price: 150000 },
+        { name: "Celana", price: 200000 },
+        { name: "Topi", price: 50000 }
+    ];
+    const TotalPrice = Products.map((item) => {
+        return item.price * 0.9
+    })
+    console.log(TotalPrice);
+
+    // Soal 5 Total Harga berdasarkan Stok
+    const penjualan = [
+        { barang: "Laptop", jumlah: 5, harga: 8000000 },
+        { barang: "Smartphone", jumlah: 5, harga: 3000000 },
+        { barang: "Tablet", jumlah: 3, harga: 2000000 },
+        { barang: "Tablet", jumlah: 3, harga: 2000000,
+        penjual: [
+            { Penjualsatu: 'Sarif'}
+            ] 
+        },
+               
+    ];
+    const totalPenjualan = penjualan.map((item) => {
+        return item.harga * item.jumlah
+    })
+    console.log(totalPenjualan);
+
+    const filterPenjualan = penjualan.filter((item) => {
+        return item.barang === "Tablet"
+    })
+    console.log(filterPenjualan);
+
+    const Penjual = penjualan.map((item) => {
+        return item.penjual
+    })
+    console.log(Penjual);
+
+
+</script>

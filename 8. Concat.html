@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concat Method</title>
+</head>
+
+<body style="background: #000;">
+
+</body>
+
+</html>
+
+<!-- Metode concat() mengembalikan array baru 
+    dengan menggabungkan dua atau lebih nilai/array. -->
+<script>
+
+    const a = [1, 2, 3];
+    const b = [4, 5, 6];
+    const merger = a.concat(b);
+    console.log(merger);
+    // Output : [ 1, 2, 3, 4, 5, 6 ]
+
+    const str1 = ['Luthfi'];
+    const str2 = ['Enggar'];
+    const str3 = ['Juang'];
+    const fullName = str1.concat(str2, str3);
+    console.log(fullName);
+    // Output : [ "Luthfi", "Enggar", "Juang" ]
+
+    const numbers = [10, 20, 30];
+    const add = numbers.concat(40, 50, 60);
+    console.log(add);
+    // Output : [ 1, 2, 3, 4, 5, 6 ]
+
+    const num = [1, 2, 3];
+    const nestedArray = [
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    const merge = num.concat(nestedArray);
+    console.log(merge);
+    // Output : [ 1, 2, 3, [4, 5, 6], [7, 8, 9] ]
+
+
+    // Soal 1 (Menggabungkan 2 Number Array)
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const arr3 = arr1.concat(arr2);
+    console.log(arr3);
+
+    // Soal 2 (Menggabungkan 3 Number Array)
+    const first = ['a', 'b'];
+    const second = ['c', 'd'];
+    const third = ['e', 'f'];
+    const fourth = first.concat(second, third);
+    console.log(fourth);
+
+
+    // Soal 3 (Menggabungkan 2 String Array Menjadi Object dan Memiliki Value)
+    const fruits = ['apple', 'banana'];
+    const vegetables = ['carrot', 'broccoli'];
+
+    // Gunakan Map Untuk Membuat Object
+    const typeFruits = fruits.map(namaBuah => ({ type: 'Buah', nama: namaBuah }));
+    const typeVege = vegetables.map(namaSayuran => ({ type: 'Sayuran', nama: namaSayuran }));
+
+    // Concating
+    const fruitsVege = typeFruits.concat(typeVege);
+    console.log(fruitsVege);
+
+
+    // Soal 4 (Menggabungkan 3 Array Menjadi 1 String Tunggal)
+    const string1 = ['apple', 'banana', 'cherry'];
+    const string2 = ['date', 'elderberry'];
+    const string3 = ['fig', 'grape'];
+
+    // Normal Concating
+    const string4 = string1.concat(string2, string3);
+
+    // Gunakan Join dan Tambahkan , (Koma)
+    const coma = string4.join(', ')
+    console.log(coma);
+
+
+    // Soal 5 (Menggabungkan 2 Objects dan Sorting Harga)
+    const products1 = [
+        { name: 'Laptop', price: 1000 },
+        { name: 'Phone', price: 500 },
+    ];
+    const products2 = [
+        { name: 'Tablet', price: 800 },
+        { name: 'Desktop', price: 1200 },
+    ];
+
+    // Normal Concating
+    const concating = products1.concat(products2);
+
+    // Sorting Price
+    const sorting = concating.sort((a, b) => {
+        return a.price - b.price
+    });
+    console.log(sorting);
+
+
+
+
+
+
+
+
+</script>

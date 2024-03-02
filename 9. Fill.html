@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Method</title>
+</head>
+
+<body style="background: #000;">
+
+</body>
+
+</html>
+
+<!-- Metode fill() mengembalikan array 
+    dengan mengisi semua elemen dengan nilai tertentu. -->
+<!-- Indeks Berlaku Dikurangi 1-->
+<script>
+
+    const numbers = [1, 2, 3, 4, 5];
+    numbers.fill(0);
+    console.log(numbers);
+    // Output : [ 0, 0, 0, 0, 0 ]
+
+    const num = [1, 2, 3, 4, 5];
+    num.fill(0, 3, 5);
+    console.log(num);
+    // Output : [ 1, 2, 3, 0, 0 ]
+
+    function array(n) {
+        return Array(n) // 'Array' karena ingin membuat array
+            .fill(n) // Normal Fill
+            .map((_, index) => index + 1) // _ Digunakan Untuk Membuat Angka Yang Berbeda-Beda, Sebagai Fungsi Pemetaan
+    }
+    console.log(array(10));
+    // Output :  [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+
+    // Soal 1 (Isi Dengan Angka 0 Semua)
+    const a = [1, 2, 3, 4, 5];
+    a.fill(0);
+    console.log(a);
+
+    // Soal 2 (Isi Dengan 'White')
+    const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+    colors.fill('White');
+    console.log(colors);
+
+    // Soal 3 (Isi Beberapa Angka Dengan 0)
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    arr.fill(0, 2, 7);
+    console.log(arr);
+
+    // Soal 4 (Isi Beberapa String Dengan 'X')
+    const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+    letters.fill('x', 3, 7);
+    console.log(letters);
+
+    // Soal 5 (Isi Angka Genap Dengan Angka 0)
+    const data = [11, 20, 31, 40, 51, 60, 71];
+
+    // Gunakan ForEach 😂 Bukan Fill
+    data.forEach((n, index) => {
+        // Conditional Jika Angka Genap
+        if (n % 2 === 0) {
+            data[index] = 0;
+        }
+    });
+    console.log(data);
+
+
+
+</script>

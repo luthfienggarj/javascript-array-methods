@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array From Method</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- Metode from() membuat array baru dari objek seperti array atau objek yang dapat diubah. -->
+<!-- Bisa Juga Sebagai Konversi Dari String Ke Number & Sebaliknya -->
+<script>
+
+    // Konversi Dari String Ke String
+    const str = '123456789';
+    const res = Array.from(str);
+    console.log(res);
+    // Output : [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+
+    // Konversi Dari String Ke Number
+    const str2 = '123456789';
+    const res2 = Array.from(str2, Number);
+    console.log(res2);
+    // Output : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+    // Konversi Dari Number Ke String
+    const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const res3 = Array.from(num, String);
+    console.log(res3);
+    // Output : [ "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+
+    // Mmebuat Set Array Baru Number
+    const num2 = [1, 2, 4, 5, 6, 3, 5, 7, 8, 9, 6, 5, 3, 6, 3, 2];
+    const resNum2 = Array.from(new Set(num2));
+    console.log(resNum2);
+
+    // Membuat Set Array Baru String
+    const friends = ['Lilinda', 'Vanda', 'Luthfi', 'Lilinda', 'Luthfi'];
+    const result = Array.from(new Set(friends));
+    console.log(result);
+
+    // For Fun
+    const prog = 'JAVASCRIPT';
+    const resProg = Array.from(prog);
+    console.log(resProg);
+
+
+    // Soal 1 (Menambahkan Nilai 10 Dari Array)
+    const mySet = new Set([1, 2, 3, 4, 5]);
+    const value = Array.from(mySet, Element => Element + 10);
+    console.log(value);
+
+    // Soal 2 (Unicode String Desimal)
+    const unicodeString = "HelloWorld";
+    const uni = Array.from(unicodeString, char => char.codePointAt(0))
+    console.log(uni);
+
+    // Soal 3 (Ubah Ke 'a', 'b', 'c' )
+    const myMap = new Map([['a', 1], ['b', 2], ['c', 3]]);
+    const arrRes = Array.from(myMap.keys()); // Gunakan Keys Jadi Hanya String Yang Diambil
+    console.log(arrRes);
+
+</script>

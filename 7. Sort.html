@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Method</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- Metode sort() mengurutkan item array 
+    dalam urutan tertentu (menaik atau menurun). -->
+
+<script>
+
+    // Sort Array String
+    const students = ['Ziz', 'Foupo', 'Hugo', 'Ismail', 'Annuri'];
+    students.sort();
+    console.log(students);
+    // Output : [ "Annuri", "Foupo", "Hugo", "Ismail", "Ziz" ]
+    // Output Berjalan Normal Jika Menggunakan String
+
+    // Number Sorting
+    const numbers = [10, 25, 60, 88, 44, 12, 1, 102];
+    numbers.sort((a, b) => a - b);
+    console.log(numbers);
+    // Output : [ 1, 10, 12, 25, 44, 60, 88, 102 ];
+    // Harus Menggunakan Function Terlebih Dahulu dan dilakukan Pengurangan
+
+    // Objects Sorting
+    const employee = [
+        {
+            nama: 'Rina',
+            jabatan: 'Direktur',
+            gaji: 7000,
+        },
+        {
+            nama: 'Jujo',
+            jabatan: 'Manager',
+            gaji: 4000,
+        },
+        {
+            nama: 'Yuyo',
+            jabatan: 'CEO',
+            gaji: 12000,
+        },
+    ];
+
+    employee.sort((a, b) => {
+        return a.nama - b.nama
+    });
+    console.log(employee);
+
+
+    // Soal 1 (Sorting Numbers)
+    const arr = [5, 2, 9, 1, 5];
+    arr.sort((a, b) => a - b);
+    console.log(arr);
+
+    // Soal 2 (Sorting Age Highest to Lowest)
+    const people = [
+        { name: 'John', age: 30 },
+        { name: 'Alice', age: 25 },
+        { name: 'Bob', age: 35 },
+        { name: 'Eve', age: 28 },
+    ];
+    const sortPeople = people.sort((a, b) => {
+        return b.age - a.age
+    });
+    console.log(sortPeople);
+
+    // Soal 3 (Sorting Fruits)
+    const words = ['apple', 'Banana', 'cherry', 'date', 'Elderberry'];
+    words.sort((a, b) => a - b);
+    console.log(words);
+
+    // Soal 4 (Alfabetis Perpaduan Kapital dan Non-Kapital)
+    const fruits = ['apple', 'Banana', 'cherry', 'date', 'Elderberry'];
+    fruits.sort((a, b) => {
+        return b.localeCompare(a, undefined, { sensitivity: "base" })
+    });
+    console.log(fruits);
+
+    // Soal 5 (Sorting Objects)
+    const products = [
+        { name: 'Laptop', price: 1000 },
+        { name: 'Phone', price: 500 },
+        { name: 'Tablet', price: 800 },
+        { name: 'Desktop', price: 1200 },
+    ];
+    const result = products.sort((a, b) => {
+        return a.price - b.price
+    });
+    console.log(result);
+
+
+</script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexOf</title>
+</head>
+
+<body style="background: #000;">
+
+</body>
+
+</html>
+
+<!-- Metode indexOf() mengembalikan indeks kemunculan pertama 
+    elemen array, 1 jika ditemukan atau -1 jika tidak ditemukan. -->
+<!-- Singkatnya IndexOf Melakukan Pengecekan Terhadap Sebuah Array,
+     Jika Ada 1, Jika Tidak Ada -1 -->
+<script>
+
+    // Normal Check
+    const a = ['Lulu', 'Lee', 'Mathew'];
+    const b = a.indexOf('Lee');
+    console.log(b);
+    // Output : 1
+
+    const num = [1, 2, 3];
+    const check = num.indexOf(4);
+    console.log(check);
+    // Output : -1
+
+    // Replacing Check
+    const names = ['Lulu', 'Lee', 'Mathew'];
+    const index = names.indexOf('Lee');
+    names[index] = 'Yor';
+    console.log(names);
+    // Output : [ "Lulu", "Yor", "Mathew" ]
+
+    // Conditional
+    const countries = ['India', 'Indonesia', 'Malaysia'];
+    const checking = countries.indexOf('Mesir');
+    
+    if (checking > -1) {
+        console.log("Asia Country");
+    } else {
+        console.log("Not Asia Country");
+    }
+
+
+    // Soal 1 (Mencari apple pada index pertama)
+    const fruits = ['apple', 'banana', 'cherry', 'date', 'apple'];
+    const resFruits = fruits.indexOf('apple');
+    console.log(resFruits);
+
+    // Soal 2 (Mencari 40 pada index)
+    const numbers = [10, 20, 30, 40, 50, 60, 70];
+    const resNum = numbers.indexOf(40);
+    console.log(resNum);
+
+    // Soal 3 (Mencari red pada index terakhir)
+    const colors = ['red', 'green', 'blue', 'yellow', 'red'];
+    const resColors = colors.lastIndexOf('red');
+    console.log(resColors);
+</script>

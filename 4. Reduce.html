@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce Method</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- Metode pengurangan() mengeksekusi fungsi peredam pada setiap 
+    elemen array dan mengembalikan nilai single output. -->
+<script>
+
+    // Mengambil Salah Satu Angka Tertinggi
+    const numbers = [1, 2, 3, 4, 5];
+    const reducing = numbers.reduce((accumulator, value) => {
+        return accumulator > value ? accumulator : value;
+    }, -Infinity)
+    console.log(reducing);
+
+    // Mengkalikan Setiap Price dan Stok
+    const store = [
+        {
+            name: 'Laptop',
+            price: 1000,
+            stock: 5,
+        },
+        {
+            name: 'Mouse',
+            price: 500,
+            stock: 8,
+        },
+        {
+            name: 'Mouse Pad',
+            price: 100,
+            stock: 10,
+        },
+    ];
+    const total = store.reduce((acc, item) => {
+        return acc + item.price * item.stock;
+    }, 0);
+    console.log(total);
+
+
+    // Soal 1
+    const number = [2, 4, 6, 8, 10];
+    const num = number.reduce((arr, value) => {
+        return arr + value;
+    })
+    console.log(num);
+
+    // Soal 2
+    const number2 = [3, 1, 4, 1, 5];
+    const multiplication = number2.reduce((arr, value) => {
+        return arr * value;
+    });
+    console.log(multiplication);
+
+    // Soal 3
+    const number3 = [10, 20, 30, 40, 50];
+    const average = number3.reduce((arr, value) => {
+        return arr + value;
+    });
+
+    const avg = average / number3.length;
+    console.log(avg);
+
+    // Soal 4 
+    const products = [
+        { name: 'Laptop', price: 1000 },
+        { name: 'Mouse', price: 500 },
+        { name: 'Keyboard', price: 300 },
+    ];
+    const totalProductsPrice = products.reduce((arr, price) => {
+        return arr + price.price
+    }, 0)
+    console.log(totalProductsPrice);
+
+    // Soal 5
+    const transaction = [
+        { amount: 100 },
+        { amount: 200 },
+        { amount: 50 },
+        { amount: 75 },
+    ];
+    const totalTransaction = transaction.reduce((arr, item) => {
+        return arr + item.amount
+    }, 0)
+    console.log(totalTransaction);
+
+</script>

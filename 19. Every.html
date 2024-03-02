@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Method</title>
+</head>
+
+<body style="background: black;">
+
+</body>
+
+</html>
+
+<!-- Metode every() memeriksa apakah semua elemen array 
+    lulus fungsi pengujian yang diberikan. -->
+<!-- True / False -->
+<script>
+
+    // Normal Every
+    const nu = [1, 2, 3, 4, 5];
+    const resNu = nu.every(item => item > 0);
+    console.log(resNu);
+    // Output : true
+
+    // Normal Every
+    const num = [-1, 1, 2, 3, 4, 5];
+    const resNum = num.every(item => item > 0);
+    console.log(resNum);
+    // Output : false
+
+    // Mengecek Apakah Semua Isi Array Merupakan Bilangan Genap
+    const even = [2, 4, 6, 7, 8, 10]
+    const isEven = even.every((number) => {
+        if (number % 2 === 0) {
+            return number
+        }
+    });
+    console.log(isEven);
+    // Output : false
+
+    // Mengecek Apakah name Value Semua
+    const people = [
+        {
+            name: 'Luthfi'
+        },
+        {
+            name: 'Boy'
+        },
+        {
+            name: 'William'
+        },
+        {
+            lastName: 'Amir'
+        },
+    ];
+
+    const resPeople = people.every(item => item.name !== undefined);
+    console.log(resPeople);
+
+    
+    // Soal 1 (Apakah Array Kelipatan 10 ?)
+    const numbers = [10, 20, 30, 40, 50];
+    const resNumbers = numbers.every((item) => {
+        return item % 10 === 0
+    });
+    console.log(resNumbers);
+
+    // Soal 2 (Apakah Memiliki Lenght 5 Karakter)
+    const words = ['apple', 'banana', 'cherry', 'date', 'elderbere'];
+    const resWords = words.every(item => item.length >= 5 );
+    console.log(resWords);
+
+    // Soal 3 (Apakah Suhu Diatas 20 Celcius ?)
+    const temperatures = [25, 30, 28, 32, 29];
+    const resTemp = temperatures.every(item => item > 20);
+    console.log(resTemp);
+
+
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Method</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- Metode filter() mengembalikan array baru dengan semua elemen 
+    yang lulus pengujian yang ditentukan oleh fungsi yang diberikan. -->
+<script>
+
+    // Filter Angka Genap
+    const number = [1, 2, 3, 4, 5, 6];
+    const even = number.filter((value) => {
+        return value % 2 === 0
+    });
+    console.log(even);
+
+
+    // Filter Object
+    const students = [
+        { name: 'Luthfi', age: 21, major: 'Information System' },
+        { name: 'Vanda', age: 20, major: 'Fine Art' },
+    ];
+    const major = students.filter((person) => {
+        return person.age > 20
+    });
+    console.log(major);
+
+
+    // Filter Hanya Menampilkan 1 Angka Dari Banyak Angka (indexOf)
+    const allNumber = [1, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 6, 10];
+
+    const filterNumber = allNumber.filter((value, index, arr) => {
+        return arr.indexOf(value) === index;
+    });
+    console.log(filterNumber);
+
+
+    // Soal 1
+    const Num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const Even = Num.filter((value) => {
+        return value % 2 === 0
+    });
+    console.log(Even);
+
+    // Soal 2
+    const karyawan = [
+        { nama: "Alice", usia: 28, gaji: 5500000 },
+        { nama: "Bob", usia: 35, gaji: 7000000 },
+        { nama: "Charlie", usia: 30, gaji: 6000000 },
+        { nama: "David", usia: 25, gaji: 4800000 }
+    ];
+    const moreThan30 = karyawan.filter((age) => {
+        return age.usia < 30
+    });
+    console.log(moreThan30);
+
+    // Soal 3
+    const buah = [
+        { nama: "Apel", stok: 10 },
+        { nama: "Jeruk", stok: 5 },
+        { nama: "Mangga", stok: 15 },
+        { nama: "Pisang", stok: 3 }
+    ];
+    const filterBuah = buah.filter((stock) => {
+        return stock.stok >= 10
+    });
+    console.log(filterBuah);
+
+    // Soal 4
+    const penjualan = [
+        { barang: "Laptop", jumlah: 2, harga: 8000000 },
+        { barang: "Smartphone", jumlah: 5, harga: 3000000 },
+        { barang: "Tablet", jumlah: 3, harga: 2000000 }
+    ];
+    const highestPrice = penjualan.filter((price) => {
+        return price.harga >= 5000000
+    });
+    console.log(highestPrice);
+
+    // Soal 5
+    const buku = [
+        { judul: "Harry Potter", genre: "Fantasy", harga: 150000 },
+        { judul: "To Kill a Mockingbird", genre: "Fiction", harga: 120000 },
+        { judul: "The Hobbit", genre: "Fantasy", harga: 180000 },
+        { judul: "1984", genre: "Dystopian", harga: 140000 }
+    ];
+    const FantasyBook = buku.filter((book) => {
+        return book.genre === "Fantasy";
+    });
+    console.log(FantasyBook);
+
+
+
+
+
+</script>

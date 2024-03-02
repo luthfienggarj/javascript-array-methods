@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Include Method</title>
+</head>
+<body style="background: black;">
+    
+</body>
+</html>
+
+<!-- Metode include() memeriksa apakah suatu array berisi elemen tertentu atau tidak. -->
+<!-- True or False -->
+<script>
+
+    const fruits = ['Apple', 'Manggo', 'Orange'];
+    const check = fruits.includes("Manggo");
+    console.log(check);
+    // Output : true
+
+    const countries = ['Indonesia', 'Palestine', 'Malaysia'];
+    const africa = countries.includes('Mesir');
+    console.log(africa);
+    // Output : false
+
+    const numbers = [1, 2, 3];
+    const num = numbers.includes(1);
+    console.log(num);
+    // Output : true
+
+    const friends = ['Squidward', 'Spongebob', 'Krab'];
+    const boss = friends.includes('Krab');
+    if (boss) {
+        console.log('The Part of Krusty Krab');
+    } else {
+        console.log('Other Person !');
+    }
+    // Output : The Part of Krusty Krab
+</script>

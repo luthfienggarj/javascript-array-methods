@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Method</title>
+</head>
+<body style="background: black;">
+    
+</body>
+</html>
+
+<!-- Metode join() mengembalikan string baru dengan 
+    menggabungkan semua elemen dalam array, dipisahkan oleh 
+    pemisah yang ditentukan. -->
+<script>
+
+    // Normal Join
+    const countries = ['Japan', 'Indonesia', 'Palestine'];
+    const res = countries.join();
+    console.log(res);
+    // Output : Japan,Indonesia,Palestine
+    console.log('Asia Countries : ' + res);
+    // Output : Asia Countries : Japan,Indonesia,Palestine
+
+    // Join dengan -
+    const numbers = [1, 2, 3];
+    const num = numbers.join(' - ');
+    console.log(num);
+    // Output : 1, 2, 3, 4, 5, 6
+    
+    // Join dengan Concat dan koma
+    const num1 = [1, 2, 3];
+    const num2 = [4, 5, 6];
+    const merge = num1.concat(num2);
+    const joining = merge.join(', ');
+    console.log(joining);
+    // Output : 1, 2, 3, 4, 5, 6
+
+
+    // Soal 1 (Normal Join)
+    const fruits = ['apple', 'banana', 'cherry', 'date'];
+    const allFruits = fruits.join();
+    console.log(allFruits);
+
+    // Soal 2 (Spasi Pemisah)
+    const n = [1, 2, 3, 4, 5];
+    const nu = n.join(' ');
+    console.log(nu);
+
+    // Soal 3 (Tanpa Spasi Pemisah)
+    const colors = ['red', 'green', 'blue', 'yellow'];
+    const a = colors.join('');
+    console.log(a);
+
+    // Soal 4 (Spasi dan Tanda Seru)
+    const words = ['Hello', 'world', 'of', 'programming'];
+    const ab = words.join(' ');
+    console.log(ab + '!');
+
+    // Soal 5 (Tanda ->)
+    const items = ['apple', 'banana', 'cherry', 'date'];
+    const aa = items.join(' -> ');
+    console.log(aa);
+
+
+</script>

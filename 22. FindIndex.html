@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIndex Method</title>
+</head>
+<body style="background: black;">
+    
+</body>
+</html>
+
+<!-- Metode findIndex() mengembalikan indeks elemen array pertama yang 
+    memenuhi fungsi pengujian yang disediakan atau mengembalikan -1. -->
+<!-- Indeks Berlaku -->
+<script>
+
+    const numbers = [1, 2, 3, 4, 5];
+    const resNum = numbers.findIndex(num => num === 3);
+    console.log(resNum);
+    // Output : 2
+
+    const people = [
+        {
+            name: 'Sanji',
+            age: 19
+        },
+        {
+            name: 'Uta',
+            age: 18
+        },
+        {
+            name: 'Zoro',
+            age: 19
+        },
+    ];
+    const resPeople = people.findIndex(name => name.name === 'Uta');
+    console.log(resPeople);
+    // Output : 1
+
+    
+</script>

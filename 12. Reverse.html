@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: black;">
+    
+</body>
+</html>
+
+<!-- Metode reverse() mengembalikan array dalam urutan terbalik. -->
+<script>
+
+    // Normal Reverse
+    const n = [1, 2, 3];
+    n.reverse();
+    console.log(n);
+    // Output : [ 3, 2, 1 ]
+
+    // With Spread Operator
+    const a = [1, 2, 3, 4, 5];
+    const b = [...a].reverse();
+    console.log(b);
+
+    // String Reverse
+    const arr = ['Hello', 'World'];
+    const res = arr.reverse()
+    console.log(res);
+
+    // Conditional Reverse
+    const z = ['Luthfi', 'Enggar', 'Juang']
+    
+    function conditional () {
+        if (z.length > 1) {
+            return z.reverse()
+        } else {
+            return z
+        }
+    }
+    console.log(conditional ());
+
+
+    // Soal 1 (Normal Reverse)
+    const numbers = [1, 2, 3, 4, 5];
+    numbers.reverse();
+    console.log(numbers);
+
+    // Soal 2 (String Reverse)
+    const colors = ['red', 'green', 'blue', 'yellow'];
+    colors.reverse();
+    console.log(colors);
+
+    // Soal 3 (Reverse With Uppercase)
+    const fruits = ['apple', 'banana', 'cherry', 'date'];
+    const f = fruits.map((item) => {
+        return item.toUpperCase()
+    })
+    const result = f.reverse();
+    console.log(result);
+
+    // Soal 4 (Reverse With Lowercase)
+    const words = ['Hello', 'world', 'of', 'programming'];
+    const w = words.map((item) => {
+        return item.toLowerCase()
+    });
+    const re = w.reverse();
+    console.log(re);
+
+    // Soal 5 (Reverse With Num)
+    const numb = [10, 20, 30, 40, 50, 60];
+    const num = numb.map((item) => {
+        return item * 2
+    });
+    const reversing = num.reverse();
+    console.log(reversing);
+
+</script>

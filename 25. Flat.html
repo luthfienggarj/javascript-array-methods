@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Method</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- Metode flat() membuat larik baru dengan 
+    meratakan larik bersarang hingga kedalaman yang ditentukan. -->
+<!-- Bisa gunakan Indeks bisa gunakan Infinity (disarankan) -->
+<script>
+
+    const arr = [1, [2, [3, [4, [5, ]]]]];
+    const res = arr.flat(4);
+    const res2 = arr.flat(3);
+    console.log(res);
+    // Output : [ 1, 2, 3, 4, 5 ]
+    console.log(res2);
+    // Output : [ 1, 2, 3, 4  [ 5 ]]
+
+    const numbers = [1, [2, [3, [4, [5, [6]]]]]];
+    const result = numbers.flat(Infinity);
+    console.log(result);
+    // Output : [ 1, 2, 3, 4, 5, 6 ]
+</script>

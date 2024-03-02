@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Method</title>
+</head>
+
+<body style="background: black;">
+
+</body>
+
+</html>
+
+<!-- Metode some() menguji apakah salah satu 
+    elemen array lulus fungsi pengujian yang diberikan. -->
+<!-- True / False -->
+<!-- Intinya Minimal Ada 1 Array Yang Diujikan & Lolos Uji -->
+<script>
+
+    // Normal Some
+    const a = [1, 2, 3, 4, 5];
+    const res = a.some(item => item > 4);
+    console.log(res);
+    // Output : True
+
+    // Object Some
+    const obj = [
+        {
+            name: 'Lulu',
+            age: 20,
+        },
+        {
+            name: 'Isaac',
+            age: 41,
+        },
+        {
+            name: 'Fahri',
+            age: 15,
+        },
+    ];
+
+    const resObj = obj.some(item => item.age >= 18);
+    console.log(resObj);
+    // Output : True
+
+    // Conditional Some
+    const grade = [60, 77, 88, 56, 90, 100];
+    const result = grade.some((value) => {
+        // Mengecek apakah ada satu atau lebih siswa dibawah nilai 60
+        if (value) {
+            return value < 60
+        } else {
+            return value
+        }
+    });
+    console.log(result);
+    // Output : true (Ada salah satu atau lebih yang dibawah 60)
+
+    // Conditional Ganjil Genap
+    const oddEven = [1, 7, 3, 9];
+    const IsEven = oddEven.some(item => item % 2 === 0);
+    console.log(IsEven);
+    // Output : False (Karena Ada Satu Bilangan Ganjil)
+
+
+    // Soal 1 (Kelipatan 10)
+    const numbers = [10, 20, 30, 40, 50];
+    const resNum = numbers.some(item => {
+        return item % 10 === 0
+    });
+    console.log(resNum);
+
+    // Soal 2 (Length Array)
+    const words = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+    const resWords = words.some(item => {
+        return item.length > 5
+    });
+    console.log(resWords);
+
+    // Soal 2 (Temperatur > 20)
+    const temperatures = [25, 30, 28, 32, 29];
+    const resTemp = temperatures.some(item => {
+        return item > 20
+    });
+    console.log(resTemp);
+
+</script>

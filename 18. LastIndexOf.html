@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LastIndexOf Method</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- Metode lastIndexOf() mengembalikan indeks 
+    kemunculan terakhir elemen tertentu dalam array. -->
+<script>
+
+    const a = ['a', 'a','b','c','a','d','d',];
+    const resa = a.lastIndexOf('a');
+    console.log(resa);
+    // Output : 4 
+
+    const b = ['A', 'B', 'C', 'D'];
+    const resb = b.lastIndexOf('E');
+    console.log(resb);
+    // Output : -1 (Karena Huruf E Tidak Ada)
+
+    const c = ['a', 'b', 'c', 'a',];
+    const resc = c.lastIndexOf('a');
+    console.log(resc);
+    // Output : 3
+
+
+    // Soal 1
+    const fruits = ['apple', 'banana', 'cherry', 'date', 'apple'];
+    const resFruits = [...fruits].lastIndexOf('apple');
+    console.log(resFruits);
+
+    // Soal 2
+    const numbers = [10, 20, 30, 40, 50, 60, 70, 40, 30];
+    const resNumbers = numbers.lastIndexOf(30);
+    console.log(resNumbers);
+
+    // Soal 3
+    const colors = ['red', 'green', 'blue', 'yellow', 'red', 'purple'];
+    const resColors = colors.lastIndexOf('red');
+    console.log(resColors);
+
+</script>

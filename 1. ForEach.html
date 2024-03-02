@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!-- forEach Methods adalah mengeksekusi fungsi yang disediakan dan 
+    memodifikasi sedikit sekali untuk setiap elemen array. -->
+
+<!-- Example forEach Methods -->
+<script>
+    const grade = [80, 70, 90, 100];
+    let sum = 0;
+
+    // forEach with Arrow Function
+    grade.forEach(item => {
+        console.log(item);
+    })
+
+    // Simple forEach with Sum
+    grade.forEach(item => {
+        sum += item
+    })
+    console.log(`Sum Grades = ${sum}`);
+
+</script>
+
+<script>
+    // Soal 1 Mengkalikan Satu per satu Angka
+    const number = [40, 50, 60, 99, 80];
+    number.forEach(item => {
+        console.log(item * 2);
+    })
+
+    // Soal 2 Keterangan Buah
+    const Fruits = ['Apple', 'Banana', 'Manggo', 'Durian'];
+    Fruits.forEach(item => {
+        console.log(`I Like = ${item}`);
+    });
+
+    // Soal 3 Mencari Nilai 
+    const Siswa = [ { nama: 'Luthfi', nilai: 88 }, { nama: 'Fahri', nilai: 75 } ];
+    let LimitGrade = 80;
+    let NameHighest = '';
+
+    Siswa.forEach((item) => {
+        if (item.nilai > LimitGrade) {
+            NameHighest = item.nama
+            LimitGrade = item.nilai
+        }
+    })
+    console.log("Nama=", NameHighest, "Nilai= ", LimitGrade);
+
+    // Soal 4 Menghitung Gaji
+    const Employee = [ { name: "Robet", salary: 2000, }, { name: "Mat", salary: 1000 } ];
+    let summ = 0;
+
+    Employee.forEach((item) => {
+        return summ += item.salary;
+    })
+    console.log(`Total Semua Gaji : ${summ}`);
+
+    // Soal 5 Nama dan Nilai
+    const President = [{name: 'Franklin D. Roosevelt', grade: '97',}, {name: 'Joseph Stalin', grade: '85'},];
+    let Limit = 80;
+    let Highest = '';
+
+    President.forEach((item) => {
+        if (item.grade > Limit) {
+            Highest = item.name
+            Limit = item.grade
+        }
+    })
+    console.log("Nama =", Highest, "Nilai =", Limit);
+
+</script>
+
+
+<!-- Cuma Testing Abaikan Aja -->
+<script>
+    console.log("<---- Abaikan Output Dibawah, Cuma Testing ---->");
+    function Ages(age) {
+        let limit = 0
+        if (age > limit) {
+            console.log(`Umur Anda : ${age}`);      
+        } else {
+            console.log("Input Umur Salah");
+        }
+    }
+    Ages(25);
+</script>

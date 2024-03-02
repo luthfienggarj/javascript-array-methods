@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array IsArray Method</title>
+</head>
+<body style="background: black;">
+    
+</body>
+</html>
+
+<!-- Metode isArray() memeriksa apakah argumen yang diteruskan adalah array atau bukan. -->
+<!-- True / False -->
+<script>
+
+    const arr = ['Alfa', 'Beta', 'Cuakhzz'];
+    const str = 'Ahsiap'
+    const num = 23
+
+    console.log(Array.isArray(arr)); // true
+    console.log(Array.isArray(str)); // false
+    console.log(Array.isArray(num)); // false
+
+
+    // Object 
+    const obj = [
+        {
+            name: 'Lulu',
+            grade: '4th'
+        },
+        {
+            name: 'Ray',
+            grade: '7th'
+        },
+    ];
+    console.log(Array.isArray(obj));
+    // Output : true
+</script>
